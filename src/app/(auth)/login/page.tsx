@@ -31,12 +31,6 @@ export default function Login() {
     const handleShowPassword = () => {
       setShowPassword(!showPassword);
     };
-  
-    useEffect(() => {
-      if (status === "authenticated") {
-        router.push('/');
-      }
-    }, [status]);
     const handleLogin = (values: ValueTypes) => {
       setLoading(true);
       fetch(`http://localhost:3000/api/login`, {
@@ -120,6 +114,11 @@ export default function Login() {
                         />
                     </div>
                     <div className="flex flex-col items-center">
+                    {/* button submit */}
+                    <button type="submit" className={`bg-green-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}>
+                        Login
+            </button>
+           
                   <button
                     onClick={() => signIn("google")}
                     className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
@@ -162,10 +161,6 @@ export default function Login() {
                     <span className="ml-4">Sign In with GitHub</span>
                   </button>
                 </div>
-                    {/* button submit */}
-                    <button type="submit" className={`bg-green-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}>
-                        Login
-                    </button>
                 </Form>
             </Formik>
         </main>
