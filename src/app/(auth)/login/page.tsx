@@ -69,18 +69,20 @@ export default function Login() {
                     <div className="mb-5">
                         <label className={`${style.label}`} htmlFor="email">
                             Email
+                            
                         </label>
                         <Field
                             type="email"
                             name="email"
                             id="email"
-                            className={`${style.input}`}
+                            className = 'py-3 w-full rounded-md border-none bg-slate-100' 
                         />
                         <ErrorMessage
                             name="email"
                             component="section"
                             className={`${style.error}`}
                         />
+                        
                     </div>
 
                     {/* Password */}
@@ -93,7 +95,7 @@ export default function Login() {
                                 type={showPassword ? "text" : "password"}
                                 name="password"
                                 id="password"
-                                className={`${style.input}`}
+                                className = 'py-3 w-full rounded-md border-none' 
                             />
                             {!showPassword ? (
                                 <IoEyeOffSharp
@@ -114,10 +116,6 @@ export default function Login() {
                         />
                     </div>
                     <div className="flex flex-col items-center">
-                    {/* button submit */}
-                    <button type="submit" className={`bg-green-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}>
-                        Login
-            </button>
            
                   <button
                     onClick={() => signIn("google")}
@@ -143,7 +141,6 @@ export default function Login() {
                         />
                       </svg>
                     </div>
-                    <span className="ml-4">Sign In with Google</span>
                   </button>
 
                   <button
@@ -158,8 +155,12 @@ export default function Login() {
                         />
                       </svg>
                     </div>
-                    <span className="ml-4">Sign In with GitHub</span>
-                  </button>
+          
+              </button>
+              {/* button submit */}
+              <button type="submit" className={`bg-red-400 hover:bg-pink-600 mt-5 mb-3 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}>
+                        Login
+            </button>
                 </div>
                 </Form>
             </Formik>

@@ -8,6 +8,7 @@ import {
   BsInstagram,
   BsTwitter,
 } from "react-icons/bs";
+import Link from "next/link";
 
 export default function FooterComponent() {
   return (
@@ -19,9 +20,9 @@ export default function FooterComponent() {
               Make Your Next Career Move!{" "}
             </strong>
 
-            <a
+            <Link
               className="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-pink-400 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90"
-              href="#"
+              href="/"
             >
               <span className="text-sm font-medium"> Lets Get Started </span>
 
@@ -39,7 +40,7 @@ export default function FooterComponent() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">

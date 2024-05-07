@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroComponent = () => {
   return (
@@ -32,7 +33,9 @@ const HeroComponent = () => {
                 quia id aliquam possimus aut.
               </p>
               <button className="bg-pink-500 text-white text-2xl font-medium px-4 py-2 rounded shadow">
+                <Link href="/policy">
                 Learn More
+                </Link>
               </button>
             </div>
           </header>

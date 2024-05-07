@@ -4,7 +4,6 @@ import { MenuList } from "./menu";
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Avatar,
   Box,
   Divider,
   IconButton,
@@ -13,6 +12,7 @@ import {
   MenuItem as MuiMenuItem,
   Tooltip
 } from "@mui/material";
+import Image from "next/image";
 
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
@@ -93,9 +93,9 @@ export default function NavbarComponent() {
 
       <header className="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
         <div className="flex-1 flex justify-between items-center">
-          <a href="#" className="text-xl">
+          <Link href="/" className="text-xl">
             Dasumi Store
-          </a>
+          </Link>
         </div>
 
         <label form="menu-toggle" className="pointer-cursor md:hidden block">
@@ -174,9 +174,9 @@ export default function NavbarComponent() {
                       aria-haspopup="true"
                       aria-expanded={open ? "true" : undefined}
                     >
-                      <Avatar
-                        src={session.user.image}
-                        alt={session.user.name}
+                      <Image
+                        src="session.user.image"
+                        alt="session.user.name"
                         style={{ width: "40px", borderRadius: "50%" }}
                       />
                     </IconButton>
@@ -221,8 +221,8 @@ export default function NavbarComponent() {
                     onClick={handleClose}
                     className="flex gap-3 items-center justify-center"
                   >
-                    <img
-                      src={session.user.image}
+                    <Image
+                      src="session.user.image"
                       alt="User Avatar"
                       style={{ width: "40px", borderRadius: "50%" }}
                     />
