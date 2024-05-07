@@ -5,7 +5,7 @@ import {addToCart, removeFromCart, increment, decrement} from "@/redux/features/
 import {CartProductType, ProductType} from "@/lib/defination";
 import {useAppSelector, useAppDispatch} from "@/redux/hooks";
 import {useGetProductsQuery} from "@/redux/service/product";
-import {generators} from "openid-client";
+// import {generators} from "openid-client";
 import {useState} from "react";
 
 const CartProduct = ({ id, name, price, image }: CartProductType) => {
